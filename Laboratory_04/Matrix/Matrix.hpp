@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
+#include <fstream>
 
 namespace computationalMathematics
 {
@@ -314,15 +315,14 @@ namespace computationalMathematics
 	template <class T>
 	void WriteMatrix(Matrix<T> matr)
 	{
-
 		for (auto &row : matr)
 		{
 			for (auto &el : row)
 			{
-				cout << left << setw(6) << el << ' ';
+				cout << left << setw(10) << el << ' ';
 			}
 
-			cout << endl;
+			cout << "\n";
 		}
 	}
 

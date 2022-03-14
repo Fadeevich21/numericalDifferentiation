@@ -1,4 +1,4 @@
-#include "SolveCauchyProblem.hpp"
+﻿#include "SolveCauchyProblem.hpp"
 
 namespace cauchyProblem
 {
@@ -12,7 +12,7 @@ namespace cauchyProblem
 		delete this->_method;
 	}
 
-	void SolveCauchyProblem::setMethod(MethodCauchyProblem *const method)
+	void SolveCauchyProblem::setMethod(MethodCauchyProblem *const &method)
 	{
 		delete this->_method;
 		this->_method = method;
@@ -23,9 +23,19 @@ namespace cauchyProblem
 		return this->_method->getResult();
 	}
 
+	BaseType SolveCauchyProblem::getExactResult(const BaseType &epsilon)
+	{
+		return this->_method->getExactResult(epsilon);
+	}
+
 	void SolveCauchyProblem::writeTableResult() const
 	{
 		this->_method->writeTableResult();
+	}
+
+	void SolveCauchyProblem::writeTableResultInFile(const string &fname) const
+	{
+		this->_method->writeTableResultInFile(fname);
 	}
 
 }

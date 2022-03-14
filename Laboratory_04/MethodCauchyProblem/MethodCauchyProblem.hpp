@@ -18,6 +18,7 @@ namespace cauchyProblem
 		virtual ~MethodCauchyProblem();
 	
 		virtual BaseType getResult() = 0;
+		BaseType getExactResult(const BaseType &epsilon);
 
 		void setMaxOrderDerivative(const size_t &maxOrderDerivative);
 		void setLimitLeft(const BaseType &limitLeft);
@@ -25,6 +26,7 @@ namespace cauchyProblem
 		void setFunction(const Function &function);
 
 		void writeTableResult() const;
+		void writeTableResultInFile(const string &fname) const;
 
 	protected:
 		Matrix<BaseType> _table;
@@ -32,8 +34,9 @@ namespace cauchyProblem
 		BaseType _limitLeft;
 		BaseType _limitRight;
 		Function _function;
+		size_t _p;
 
-		static constexpr size_t _maxPossibleOrderDerivative = 10000;
+		static constexpr size_t _maxPossibleOrderDerivative = 1000;
 	};
 
 }

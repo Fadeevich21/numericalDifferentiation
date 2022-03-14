@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <windows.h>
 #include "test.hpp"
 
@@ -18,7 +18,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	cout << "Ïðèâåò, Ìèð!" << endl << endl;
+	cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚, ÐœÐ¸Ñ€!" << endl << endl;
 
 	test_();
 
@@ -27,15 +27,19 @@ int main()
 
 void test_()
 {
-	test_variantExampleMethodolicalManual_step02();
-	test_variantExampleMethodolicalManual_step01();
+	//test_variantExampleMethodolicalManual_step02();
+	//test_variantExampleMethodolicalManual_step01();
 
-	test_variant10_step02();
-	test_variant10_step01();
+	//test_variant10_step02();
+	//test_variant10_step01();
 
 	test_variant22_step02();
 	test_variant22_step01();
 
-	test_getExactResult_variant22();
-	test_getExactResult_variant10();
+	//test_variant18_step02();
+	//test_variant18_step01();
+
+	//test_getExactResult_variant22();
+	//test_getExactResult_variant10();
+
 }
